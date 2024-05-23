@@ -12,4 +12,4 @@ class StringCalculator
 end 
 
 calculator = StringCalculator.new
-puts calculator.add("1")          # Output: 1
+puts calculator.add("1,2")          # Output: 1
