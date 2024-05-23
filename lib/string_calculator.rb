@@ -15,10 +15,13 @@ class StringCalculator
 	    end
 	    numbers = numbers.gsub("\n", delimiter)
 	    num_list = numbers.split(delimiter).map(&:to_i)
+
+	    negatives = num_list.select { |num| num < 0 }
+	    raise "negative numbers not allowed: #{negatives.join(', ')}" if negatives.any?
 	    num_list.sum
 	end 
 
 end 
 
 calculator = StringCalculator.new
-puts calculator.add("//;\n1;2")  # Output: "3"
+puts calculator.add("1,-2,3")  # Output: "negative numbers not allowed: -2"
