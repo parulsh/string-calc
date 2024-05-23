@@ -24,4 +24,4 @@ class StringCalculator
 end 
 
 calculator = StringCalculator.new
-puts calculator.add("1,-2,3")  # Output: "negative numbers not allowed: -2"
+puts calculator.add("1,-2,-3")  # Output: "negative numbers not allowed: -2, -3"
